@@ -1,0 +1,28 @@
+# ──────────────────────────────────────────────────────────────────────
+# Bali Travel Health — webroot rules
+# ──────────────────────────────────────────────────────────────────────
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Block direct access to /lib (helpers + secrets)
+RewriteRule ^lib(/|$) - [F,L]
+
+# Block dotfiles, vendor, composer manifest
+RewriteRule ^(\.|vendor/|composer\.(json|lock)$) - [F,L]
+
+# AASA must be served as application/json (no extension on the URL)
+<Files "apple-app-site-association">
+    Header set Content-Type "application/json"
+</Files>
+
+# Security headers
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Disable directory listing
+Options -Indexes
