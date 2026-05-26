@@ -93,8 +93,8 @@ Repeat Steps 3–5 with the same IPA and Apple ID. Your data is stored locally o
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/BaliTravelHealth.git
-cd BaliTravelHealth
+git clone https://github.com/balitravelhealth/ios.git
+cd ios
 
 # Open in Xcode
 open BaliTravelHealth.xcodeproj
@@ -137,7 +137,6 @@ BaliTravelHealth/
 ## 🌐 Backend
 
 The app talks to a REST API at `https://backend.balihealth.me`.  
-See [`BACKEND.md`](BACKEND.md) for the full API contract and database schema if you want to host your own instance.
 
 ---
 
