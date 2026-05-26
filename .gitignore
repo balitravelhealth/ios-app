@@ -8,10 +8,4 @@ xcuserdata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
-.claude
-claude/
-TODO.md
-CLOUDFLARE.md
-BACKEND.md
-backend
-backend/
+
