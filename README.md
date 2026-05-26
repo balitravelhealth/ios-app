@@ -15,7 +15,7 @@ Bali Travel Health helps travellers stay safe before, during, and after their tr
 | **Post-Travel** | Post-travel health screening · Follow-up advice based on your results |
 | **Nursing Care** | Browse & book registered nurses in Bali · Appointment management |
 | **Offline-First** | All guides, assessments, and history cached locally — works without internet |
-| **Localisation** | UI in 14 languages · Indonesian backend content auto-translated to your device language on launch |
+| **Localisation** | Support English & Indonesian |
 
 ---
 
@@ -30,7 +30,7 @@ Bali Travel Health helps travellers stay safe before, during, and after their tr
 | Requirement | Value |
 |---|---|
 | iOS | 18.6 or later |
-| Device | iPhone (iPad supported) |
+| Device | iPhone |
 | Xcode (to build) | 26 / Xcode 16+ |
 | Swift | 5.10+ |
 
@@ -38,7 +38,8 @@ Bali Travel Health helps travellers stay safe before, during, and after their tr
 
 ## 📦 Installation — Sideloading via Sideloadly
 
-Sideloading lets you install the app on your personal device without needing an Apple Developer Program membership ($99/year). You only need a free Apple ID.
+### Requirement Before Sideloading
+You only need a free Apple ID.
 
 > **Note:** Free Apple ID sideloads expire after **7 days**. Re-run the steps below to renew. A paid Apple Developer account removes this limit.
 
