@@ -108,36 +108,6 @@ No package manager setup is required — the project uses only Apple system fram
 
 ---
 
-## 🏗 Architecture
-
-```
-BaliTravelHealth/
-├── Authentication/        Sign In with Apple · Google OAuth · Passkey · Keychain
-├── Models/                Codable data models (Assessment, Symptom, Nurse, Guide…)
-├── Networking/            BaliAPI — async/await REST client with token refresh
-├── Services/              Business logic (AssessmentService, NurseService, AdviceProvider…)
-│   ├── AppLaunchCoordinator   Offline-first fetch + cache warm-up at launch
-│   ├── LocalDataCache         File-based JSON cache (Application Support)
-│   ├── NetworkMonitor         NWPathMonitor connectivity detection
-│   └── TranslationDictionaryService   Persistent Indonesian → device-language dictionary
-└── Views/
-    ├── Home/              Pre-travel · Post-travel · Nursing care · During-travel
-    ├── EmergencyGuide*    Step-by-step guides and interactive decision flows
-    ├── HealthRiskAssessment*  Symptom selection and result display
-    └── …
-```
-
-**Key patterns:**
-- `@Observable` + `@MainActor` singletons (no Combine, no ViewModel boilerplate)
-- Offline-first: every fetch seeds from `LocalDataCache` first, network refreshes in the background
-- `TranslatingText` — a drop-in `Text` replacement that does a synchronous O(1) dictionary lookup for Indonesian → target-language translations pre-fetched at launch
-
----
-
-## 🌐 Backend
-
-The app talks to a REST API at `https://backend.balihealth.me`.  
-
 ---
 
 ## 📚 Frameworks & Licenses
@@ -167,7 +137,6 @@ Bali Travel Health uses **only Apple system frameworks** — no third-party depe
 - Authentication tokens stored exclusively in the iOS **Keychain**
 - All guide and assessment data cached locally in **Application Support** (not iCloud-synced)
 - Location is requested only when the user opens the facility finder
-- Translation is performed **on-device** using Apple's Translation framework — no text is sent to third-party translation servers
 
 ---
 
