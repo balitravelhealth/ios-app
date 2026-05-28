@@ -79,9 +79,7 @@ Before launching the app you must trust the signing certificate on your device:
 
 ### Step 6 — Launch
 
-Open **Bali Travel Health** from your Home Screen. Sign in with Apple or Google to get started.
-
----
+Open **Bali Travel Health** from your Home Screen. Sign in with Google to get started.
 
 ### Renewing after 7 days (free Apple ID only)
 
