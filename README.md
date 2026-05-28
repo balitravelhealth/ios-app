@@ -91,8 +91,8 @@ Repeat Steps 3–5 with the same IPA and Apple ID. Your data is stored locally o
 
 ```bash
 # Clone the repository
-git clone https://github.com/balitravelhealth/ios.git
-cd ios
+git clone https://github.com/balitravelhealth/ios-app.git
+cd ios-app
 
 # Open in Xcode
 open BaliTravelHealth.xcodeproj
