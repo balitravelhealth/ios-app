@@ -23,7 +23,6 @@ Bali Travel Health helps travellers stay safe before, during, and after their tr
 
 ![Bali Travel Health App](https://balihealth.sgp1.cdn.digitaloceanspaces.com/Bali%20Travel%20Health%20App.png)
 
-
 ---
 
 ## Requirements
@@ -39,15 +38,8 @@ Bali Travel Health helps travellers stay safe before, during, and after their tr
 
 ## 📦 Installation — Sideloading via Sideloadly
 
-
-Sideloading lets you install the app on your personal device without needing an Apple Developer Program membership ($99/year). You only need a free Apple ID.
-
 ### Requirement Before Sideloading
 You only need a free Apple ID.
-
-### Requirement Before Sideloading
-You only need a free Apple ID.
-
 
 > **Note:** Free Apple ID sideloads expire after **7 days**. Re-run the steps below to renew. A paid Apple Developer account removes this limit.
 
@@ -87,10 +79,6 @@ Before launching the app you must trust the signing certificate on your device:
 
 ### Step 6 — Launch
 
-Open **Bali Travel Health** from your Home Screen. Sign in with Apple or Google to get started.
-
----
-
 Open **Bali Travel Health** from your Home Screen. Sign in with Google to get started.
 
 ### Renewing after 7 days (free Apple ID only)
@@ -103,7 +91,6 @@ Repeat Steps 3–5 with the same IPA and Apple ID. Your data is stored locally o
 
 ```bash
 # Clone the repository
-
 git clone https://github.com/balitravelhealth/ios-app.git
 cd ios-app
 
@@ -119,6 +106,7 @@ No package manager setup is required — the project uses only Apple system fram
 
 ---
 
+---
 
 ## 📚 Frameworks & Licenses
 
@@ -129,15 +117,15 @@ Bali Travel Health uses **only Apple system frameworks** — no third-party depe
 | **SwiftUI** | Entire UI layer |
 | **SwiftData** | Local persistence (healthcare facilities, cached items) |
 | **Foundation** | Networking, JSON, file I/O, date handling |
-| **Translation** | On-device Indonesian → device-language batch translation (iOS 26+) |
 | **Network** | `NWPathMonitor` for real-time connectivity detection |
 | **Security** | Keychain Services — secure token and credential storage |
-| **AuthenticationServices** | Sign In with Apple · Passkey (WebAuthn) |
 | **MapKit** | Healthcare facility map |
 | **CoreLocation** | User location for facility search and appointment address |
-| **Contacts** | Address formatting in facility detail views |
 | **AVFoundation** | Looping background videos on onboarding screens |
-| **LocalAuthentication** | Face ID / Touch ID for biometric re-auth |
+
+
+> No CocoaPods, Carthage, or Swift Package Manager dependencies are used.  
+> No analytics SDKs, ad SDKs, or tracking libraries are included.
 
 ---
 
@@ -147,8 +135,10 @@ Bali Travel Health uses **only Apple system frameworks** — no third-party depe
 - Authentication tokens stored exclusively in the iOS **Keychain**
 - All guide and assessment data cached locally in **Application Support** (not iCloud-synced)
 - Location is requested only when the user opens the facility finder
+
 ---
 
+---
 
 ## 🤝 Contributing
 
