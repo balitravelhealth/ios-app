@@ -1,20 +1,21 @@
-name: Scan Release Assets
-
+name: "Release"
 on:
   release:
     types: [published]
-
 jobs:
-  virustotal:
+  release:
+    name: "Release"
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - name: "Upload Release"
+        uses: cssnr/upload-release-action@v1
+        with:
+          files: README.md
 
-      - name: VirusTotal Scan
+      - name: "VirusTotal"
         uses: cssnr/virustotal-action@v1
         with:
           vt_api_key: ${{ secrets.VT_API_KEY }}
-          # Updates your existing release notes with the scan link
-          update_release: true 
-          release_heading: '🛡️ **VirusTotal Scan Results:**'
