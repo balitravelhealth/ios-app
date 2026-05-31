@@ -1,0 +1,20 @@
+name: Scan Release Assets
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  virustotal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: VirusTotal Scan
+        uses: cssnr/virustotal-action@v1
+        with:
+          vt_api_key: ${{ secrets.VT_API_KEY }}
+          # Updates your existing release notes with the scan link
+          update_release: true 
+          release_heading: '🛡️ **VirusTotal Scan Results:**'
