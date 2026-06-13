@@ -4,6 +4,8 @@
 
 Bali Travel Health helps travellers stay safe before, during, and after their trip — with health risk assessments, step-by-step emergency guides, nurse booking, vaccine records, and personalised health advice — all available offline.
 
+[![AltStore Download](https://balihealth.sgp1.cdn.digitaloceanspaces.com/AltStore.png)](https://api.altstore.io/source/ios.balihealth.me/apps.json?app=com.visitbali.BaliTravelHealth)
+
 ---
 
 ## ✨ Features
